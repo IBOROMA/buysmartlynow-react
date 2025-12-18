@@ -7,13 +7,17 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#0055aa',
-                secondary: '#28a745',
-                accent: '#f4f7f6',
-                dark: '#333333'
+                primary: '#0A2540', // Deep Blue
+                secondary: '#FF7A00', // Vibrant Orange
+                accent: '#1DB954', // Green
+                neutral: {
+                    light: '#F5F7FA',
+                    dark: '#333333',
+                }
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
+                heading: ['Poppins', 'sans-serif'],
             },
             animation: {
                 'slow-zoom': 'zoom 20s infinite alternate',
