@@ -7,9 +7,9 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#0055aa', // Professional Blue
-                secondary: '#28a745', // Trust Green
-                accent: '#f4f7f6', // Light Gray-White
+                primary: '#0055aa',
+                secondary: '#28a745',
+                accent: '#f4f7f6',
                 dark: '#333333'
             },
             fontFamily: {
@@ -17,16 +17,16 @@ export default {
             },
             animation: {
                 'slow-zoom': 'zoom 20s infinite alternate',
-                'slide-up': 'slideUp 0.8s ease-out forwards',
+                'fade-in': 'fadeIn 0.5s ease-in-out',
             },
             keyframes: {
                 zoom: {
                     '0%': { transform: 'scale(1)' },
                     '100%': { transform: 'scale(1.1)' },
                 },
-                slideUp: {
-                    '0%': { opacity: '0', transform: 'translateY(20px)' },
-                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
                 }
             }
         },
