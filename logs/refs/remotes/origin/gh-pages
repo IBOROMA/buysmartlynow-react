@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 530bf0582d1a1c7bf8a39ac057b39b49dd37e3ca AI Bot <bot@example.com> 1766059669 +0100	fetch: storing head
+530bf0582d1a1c7bf8a39ac057b39b49dd37e3ca 968ec0adfa164792584acb119e1121acf3cfd91e AI Bot <bot@example.com> 1766063861 +0100	fetch: fast-forward
+968ec0adfa164792584acb119e1121acf3cfd91e 050dc07d6be8a30e82654ce0bfec3df437394f67 AI Bot <bot@example.com> 1766064596 +0100	fetch: fast-forward
+050dc07d6be8a30e82654ce0bfec3df437394f67 49f00a104451eaa1bd73178c1b8d68a3c0757808 AI Bot <bot@example.com> 1766065844 +0100	fetch: fast-forward

@@ -7,32 +7,18 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#0A2540', // Deep Blue
-                secondary: '#FF7A00', // Vibrant Orange
-                accent: '#1DB954', // Green
-                neutral: {
-                    light: '#F5F7FA',
-                    dark: '#333333',
-                }
+                primary: '#0f172a', // Slate 900 - Deep Rich Blue/Black for trust
+                secondary: '#f97316', // Orange 500 - Vibrant for CTAs
+                accent: '#22c55e', // Green 500 - for "Save" and positive indicators
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
                 heading: ['Poppins', 'sans-serif'],
             },
-            animation: {
-                'slow-zoom': 'zoom 20s infinite alternate',
-                'fade-in': 'fadeIn 0.5s ease-in-out',
+            container: {
+                center: true,
+                padding: '1rem',
             },
-            keyframes: {
-                zoom: {
-                    '0%': { transform: 'scale(1)' },
-                    '100%': { transform: 'scale(1.1)' },
-                },
-                fadeIn: {
-                    '0%': { opacity: '0' },
-                    '100%': { opacity: '1' },
-                }
-            }
         },
     },
     plugins: [],
