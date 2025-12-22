@@ -1,79 +1,82 @@
+
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, ShieldCheck, Lock, CreditCard } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer id="footer-contact" className="bg-neutral-light border-t border-gray-200 mt-auto pt-16 pb-8 font-sans">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-                    {/* Brand Column (4 cols) */}
-                    <div className="md:col-span-4 space-y-6">
-                        <Link to="/" className="flex items-center gap-2 mb-2 group">
-                            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-3 transition-transform">
-                                B
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-xl font-heading font-bold text-primary tracking-tight leading-none">BuySmartly</span>
-                                <span className="text-[10px] text-gray-500 uppercase tracking-wider font-medium">Compare & Earn</span>
-                            </div>
-                        </Link>
-                        <p className="text-gray-500 leading-relaxed text-sm pr-4">
-                            Your ultimate destination for smart shopping. We aggregate the best deals from top retailers and help you earn rewards on every purchase.
+        <footer className="bg-primary text-gray-300 pt-16 pb-8 border-t border-white/10">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    {/* Brand Column */}
+                    <div>
+                        <div className="flex items-center gap-2 mb-6">
+                            <div className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white font-heading font-bold text-xl shadow-lg">B</div>
+                            <span className="text-xl font-heading font-bold text-white">BuySmartly</span>
+                        </div>
+                        <p className="text-sm leading-relaxed mb-6 text-gray-400">
+                            The smartest way to shop online. Compare prices, find verified deals, and earn cash rewards on every purchase.
                         </p>
-
-                        {/* Trust Badges - Mini */}
-                        <div className="flex items-center gap-4 pt-2">
-                            <div className="flex items-center gap-1.5 text-xs text-gray-500 font-medium bg-white px-3 py-1.5 rounded-full border border-gray-100 shadow-sm">
-                                <Lock size={12} className="text-green-500" /> SSL Secured
-                            </div>
-                            <div className="flex items-center gap-1.5 text-xs text-gray-500 font-medium bg-white px-3 py-1.5 rounded-full border border-gray-100 shadow-sm">
-                                <ShieldCheck size={12} className="text-primary" /> Verified
-                            </div>
+                        <div className="flex gap-4">
+                            <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Facebook size={18} /></a>
+                            <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Twitter size={18} /></a>
+                            <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Instagram size={18} /></a>
                         </div>
                     </div>
 
-                    {/* Links Columns */}
-                    <div className="md:col-span-2 md:col-start-6">
-                        <h4 className="font-heading font-bold text-gray-900 mb-6 uppercase text-xs tracking-wider">Categories</h4>
-                        <ul className="space-y-3 text-sm text-gray-500">
-                            <li><Link to="/deals" className="hover:text-secondary transition-colors">Electronics & Gadgets</Link></li>
-                            <li><Link to="/deals" className="hover:text-secondary transition-colors">Fashion & Style</Link></li>
-                            <li><Link to="/travel" className="hover:text-secondary transition-colors">Travel & Flights</Link></li>
-                            <li><Link to="/deals" className="hover:text-secondary transition-colors">Home & Living</Link></li>
+                    {/* Quick Links */}
+                    <div>
+                        <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
+                        <ul className="space-y-3">
+                            <li><Link to="/deals" className="hover:text-secondary transition-colors flex items-center gap-2"><span>›</span> Browse Deals</Link></li>
+                            <li><Link to="/travel" className="hover:text-secondary transition-colors flex items-center gap-2"><span>›</span> Flight Comparison</Link></li>
+                            <li><Link to="/earn" className="hover:text-secondary transition-colors flex items-center gap-2"><span>›</span> Partner Program</Link></li>
+                            <li><Link to="/about" className="hover:text-secondary transition-colors flex items-center gap-2"><span>›</span> About Us</Link></li>
                         </ul>
                     </div>
 
-                    <div className="md:col-span-2">
-                        <h4 className="font-heading font-bold text-gray-900 mb-6 uppercase text-xs tracking-wider">Earn With Us</h4>
-                        <ul className="space-y-3 text-sm text-gray-500">
-                            <li><Link to="/earn" className="hover:text-secondary transition-colors font-medium text-primary">Affiliate Program</Link></li>
-                            <li><Link to="/earn" className="hover:text-secondary transition-colors">Partner Login</Link></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Refer & Earn</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Commission Rates</a></li>
+                    {/* Contact Info */}
+                    <div>
+                        <h4 className="text-white font-bold mb-6 text-lg">Contact Us</h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3">
+                                <MapPin size={20} className="text-secondary shrink-0 mt-1" />
+                                <span className="text-sm">123 Innovation Drive, Lekki Phase 1, Lagos, Nigeria</span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Phone size={20} className="text-secondary shrink-0" />
+                                <span className="text-sm">+234 800 123 4567</span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Mail size={20} className="text-secondary shrink-0" />
+                                <span className="text-sm">support@buysmartly.com</span>
+                            </li>
                         </ul>
                     </div>
 
-                    <div className="md:col-span-2">
-                        <h4 className="font-heading font-bold text-gray-900 mb-6 uppercase text-xs tracking-wider">Support</h4>
-                        <ul className="space-y-3 text-sm text-gray-500">
-                            <li><a href="#" className="hover:text-secondary transition-colors">Help Center</a></li>
-                            <li><a href="mailto:support@buysmartlynow.com" className="hover:text-secondary transition-colors">Contact Us</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Trust & Safety</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Terms & Privacy</a></li>
-                        </ul>
+                    {/* Newsletter */}
+                    <div>
+                        <h4 className="text-white font-bold mb-6 text-lg">Newsletter</h4>
+                        <p className="text-sm text-gray-400 mb-4">Subscribe for daily deal alerts and exclusive offers.</p>
+                        <div className="relative">
+                            <input
+                                type="email"
+                                placeholder="Email address"
+                                className="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary text-sm"
+                            />
+                            <button className="absolute right-2 top-1.5 bg-secondary text-white p-1.5 rounded-md hover:bg-orange-600 transition-colors">
+                                <Send size={16} />
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-gray-400">© 2025 BuySmartlyNow. All rights reserved.</p>
-
-                    <div className="flex items-center gap-4 text-gray-400">
-                        <a href="#" className="hover:text-primary transition-colors p-2 hover:bg-white rounded-full"><Twitter size={18} /></a>
-                        <a href="#" className="hover:text-primary transition-colors p-2 hover:bg-white rounded-full"><Instagram size={18} /></a>
-                        <a href="#" className="hover:text-primary transition-colors p-2 hover:bg-white rounded-full"><Linkedin size={18} /></a>
-                        <a href="#" className="hover:text-primary transition-colors p-2 hover:bg-white rounded-full"><Facebook size={18} /></a>
+                <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                    <p>&copy; {new Date().getFullYear()} BuySmartly. All rights reserved.</p>
+                    <div className="flex gap-6">
+                        <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <Link to="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
                     </div>
                 </div>
             </div>

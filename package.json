@@ -2,7 +2,6 @@
   "name": "buysmartlynow-react",
   "version": "2.1.0",
   "type": "module",
-  "homepage": "https://IBOROMA.github.io/buysmartlynow-react",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
