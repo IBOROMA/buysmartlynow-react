@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 c7550617e8a1b6cd8f6abee4eb6ee6767041b169 AI Bot <bot@example.com> 1766048987 +0100	commit (initial): Initial commit
+c7550617e8a1b6cd8f6abee4eb6ee6767041b169 618b89d22c6d2ece3957af9921797f45a6f5566b AI Bot <bot@example.com> 1766059406 +0100	commit: Prepare for deployment: Fix build and update configuration
+618b89d22c6d2ece3957af9921797f45a6f5566b f7abb00f6d1dca99b7d651fa80b2ce1c9880a187 AI Bot <bot@example.com> 1766059605 +0100	commit: Configure GitHub Pages deployment
+f7abb00f6d1dca99b7d651fa80b2ce1c9880a187 0f923017638856b773cd0d6ae932f12ee27876cd AI Bot <bot@example.com> 1766059995 +0100	commit: Add .nojekyll to fix GitHub Pages routing
+0f923017638856b773cd0d6ae932f12ee27876cd 481b3a622144f7953b52da3dc9bb6076b086789b AI Bot <bot@example.com> 1766063766 +0100	commit: Upgrade to Version 2.0: New Design System, Homepage Overhaul
+481b3a622144f7953b52da3dc9bb6076b086789b 2ad3bd77183c281a74e90fb4565dbaf72df68783 AI Bot <bot@example.com> 1766064906 +0100	commit: Release v2.1.0: Restored Price Comparison feature and added CHANGELOG
+2ad3bd77183c281a74e90fb4565dbaf72df68783 186849f17cdde20ff465c6e881078a2308a57aa5 AI Bot <bot@example.com> 1766066105 +0100	commit: Trigger Redeploy: v2.1.0 fresh push

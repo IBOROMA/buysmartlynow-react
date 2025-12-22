@@ -1,43 +1,42 @@
 import React from 'react';
-import { Smartphone, Plane, Shirt, Home, ShoppingBag, Coffee } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-
-const categories = [
-    { id: 'gadgets', name: 'Electronics', icon: Smartphone, color: 'bg-blue-100 text-blue-600', link: '/deals?category=gadgets' },
-    { id: 'fashion', name: 'Fashion', icon: Shirt, color: 'bg-pink-100 text-pink-600', link: '/deals?category=fashion' },
-    { id: 'travel', name: 'Travel & Flights', icon: Plane, color: 'bg-orange-100 text-orange-600', link: '/travel' },
-    { id: 'home', name: 'Home & Living', icon: Home, color: 'bg-green-100 text-green-600', link: '/deals?category=home' },
-    { id: 'beauty', name: 'Beauty', icon: ShoppingBag, color: 'bg-purple-100 text-purple-600', link: '/deals?category=beauty' },
-    { id: 'groceries', name: 'Groceries', icon: Coffee, color: 'bg-yellow-100 text-yellow-600', link: '/deals?category=groceries' }
-];
+import { Smartphone, Plane, Shirt, Armchair } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 
 const CategorySection = () => {
-    const navigate = useNavigate();
+    const categories = [
+        { name: 'Electronics', icon: <Smartphone size={32} />, link: '/deals?category=Electronics', discount: 'Up to 40% off' },
+        { name: 'Fashion', icon: <Shirt size={32} />, link: '/deals?category=Fashion', discount: 'New Arrivals' },
+        { name: 'Travel', icon: <Plane size={32} />, link: '/travel', discount: 'Best Flight Deals' },
+        { name: 'Home', icon: <Armchair size={32} />, link: '/deals?category=Home', discount: 'Clearance Sale' },
+    ];
 
     return (
-        <section className="py-16 bg-white">
+        <div className="py-16 bg-white">
             <div className="container mx-auto px-4">
-                <div className="text-center max-w-2xl mx-auto mb-12">
-                    <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">Browse Categories</h2>
-                    <p className="text-gray-500">Find exactly what you need with the best discounts.</p>
+                {/* 3. CATEGORIES: Clean Header */}
+                <div className="flex justify-between items-end mb-10">
+                    <h2 className="text-2xl font-bold text-gray-900">Browse by Category</h2>
+                    <Link to="/deals" className="text-sm font-bold text-primary hover:text-secondary transition-colors">View All Categories</Link>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    {categories.map((cat) => (
-                        <div
-                            key={cat.id}
-                            onClick={() => navigate(cat.link)}
-                            className="group flex flex-col items-center justify-center p-6 rounded-2xl bg-gray-50 border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1"
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    {categories.map((cat, idx) => (
+                        <Link
+                            key={idx}
+                            to={cat.link}
+                            className="group bg-gray-50 border border-gray-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
                         >
-                            <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${cat.color} group-hover:scale-110 transition-transform`}>
-                                <cat.icon size={28} />
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                {cat.icon}
                             </div>
-                            <h3 className="font-bold text-gray-800 group-hover:text-primary transition-colors">{cat.name}</h3>
-                        </div>
+                            <h3 className="font-bold text-gray-900 mb-1">{cat.name}</h3>
+                            {/* 3. CATEGORIES: Micro-copy */}
+                            <span className="text-xs text-secondary font-medium">{cat.discount}</span>
+                        </Link>
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

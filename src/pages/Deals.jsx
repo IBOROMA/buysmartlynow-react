@@ -118,6 +118,13 @@ const Deals = () => {
 
                                     return true;
                                 })
+<<<<<<< HEAD
+=======
+                                .filter(product => {
+                                    // Optional: Sort logic could be applied here if needed, but usually done via distinct sort function
+                                    return true;
+                                })
+>>>>>>> aa7e55b01024f671134a1f832a561afc18368edd
                                 .map(product => (
                                     <ProductCard key={product.id} product={product} />
                                 ))}
